@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: antiquewhite;
+}
+
+/* Global Tags */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(2, 2, 2);
+}
+h2 {
+  padding: 1vw 5vw;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: goldenrod;
+}
+
+
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+/* Navigation */
+nav{
+  position: fixed;
+  width: 100%;
+  background-color: #757373;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 8vw;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+  border:#757373;
+  border-bottom: #7a94e8 5px;
+  border-style: groove;
+  margin-bottom: 40px;
+
+}
+
+nav img{
+  width: 160px;
+  cursor: pointer;
+  
+}
+
+nav .navigation ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li{
+  margin-left: 20px;
+}
+
+nav .navigation ul li a{
+  text-decoration: wavy;
+  color:goldenrod;
+  font-size: 18px;
+  font-weight: 700;
+  transition: o.35s ease;
+
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+  color:whitesmoke;
+}
+#welcome .welcomeheader{
+  padding:30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 205px;
+  height: 50px;
+
+
+}
+
+#home{
+  width: 100%;
+  justify-content: center;
+
+}
+
+
+#home .content{
+  padding:250px;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 390px;
+ 
+}
+
+ #home .content .popular_styles{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+  border-style:outset;
+  border-radius: 100px;
+  backdrop-filter: blanchedalmond(40px);
+  box-shadow: 0 8px 32px 0;
+
+  
+ }
+
+
+/* features */
+#home h2{
+  color: goldenrod;
+  font-size: 2.4rem;
+  letter-spacing: -3px;
+  justify-content: center;
+  font-weight: 600;
+  font-family: monospace;
+  
+}
+#home p{
+  justify-content: center;
+  
+}
+#home .popular_styles{
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+#home .btn{
+  margin-top: 40px;
+}
+#home a{
+  text-decoration:none ;
+  background-color: blanchedalmond;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  font-weight: 600 ;
+  border-radius: 5px;
+}
+#home a.blue{
+  color: #fff;
+  background: rgb(25, 25, 93);
+  transition: 0.4s;
+}
+#home a.blue:hover{
+  color:  rgb(25, 25, 93);
+  background: #fff;
+}
+
+#home a.yellow{
+  color: #fff;;
+  background: goldenrod;
+  transition: 0.4s;
+}
+#home a.yellow:hover{
+  color: goldenrod;
+  background:#fff;
+}
+.gallery{
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+
+}
+.gallery div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  justify-content: space-between space-evenly;
+}
+.gallery div img{
+  width: 100px;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+.gallery div img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#backbtn,#nextbtn{
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+
+}
+.gallerywrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10% auto;
+}
+.explore  .gallery{
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+}
+.explore .salon .content .gallery div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  justify-content: space-between space-evenly;
+}
+
+#features{
+  padding: 5vw 8vw 0vw 8vw;
+  text-align: center;
+
+}
+
+#features .viewmore{
+  margin-top: -505px;
+
+}
+#features a{
+  text-decoration:none ;
+  background-color: blanchedalmond;
+  font-size: 2.4rem;
+  font-weight: 600 ;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: auto;
+}
+#features a.blue{
+  color: #fff;
+  background:goldenrod;
+  transition: 0.4s;
+} 
+#features .headingsfeatures h1{
+  border: #757373;
+  color: #757373;
+  font-weight: 600;
+  
+}
+
+#features .fea_base{
+  display: flex;
+  justify-content: space-between space-evenly;
+  text-align: center;
+  flex-direction: row;
+  margin-left: 10px;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+  height: 50%;
+  border-radius: 30px;
+
+}
+#features .fea_box{
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  text-align: start;
+  justify-content: space-between space-evenly;
+  margin-left: 10px;
+  justify-content: center;
+  border-radius:20px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #757373;
+}
+#features .fea_box img{
+  width: 80px;
+}
+#features .fea_box h3{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: goldenrod;
+  padding: 13px 0 7px 0;
+}
+#features .fea_box p{
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+#homes_and_apartments {
+ 
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+#homes_and_apartments {
+  text-align: start;
+  height: 100%;
+}
+#homes_and_apartments .just_a_few{
+  text-align: start;
+  
+  height: 100%;
+  width: 300px;
+ 
+}
+#homes_and_apartments .images {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row ;
+  margin-top: 10px;
+  position: relative;
+}
+
+
+#homes_and_apartments .just_a_few img{
+  width: 300px;
+}
+#homes_and_apartments .star img{
+  width: 20px;
+}
+#homes_and_apartments .images .details{
+  padding: 10px 10px 0 10px;
+}
+#homes_and_apartments .just_a_few .details{
+  background-color: rgb(165, 154, 91);
+  color: black;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 20%;
+  position: relative;
+}
+#homes_and_apartments .just_a_few .price{
+  background-color: rgb(118, 118, 216);
+  color: rgb(231, 231, 241);
+  line-height: 20px;
+  width: 70px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+#bloggers{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  margin-left: 80px;
+  
+}
+#bloggers .services{
+font-style: oblique;
+font-weight: 200;
+font-stretch: extra-condensed;
+text-decoration: wavy;
+color: #757373;
+}
+#bloggers h1{
+color: #757373;
+
+}
+#bloggers p{
+color: #757373;
+font: bold;
+
+}
+
+
+  
+
+/* course */
+
+/* registration */
+#registration {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(rgba(60, 70, 170, 0.5), rgba(60, 70, 170, 0.5)),url("SPAPHOTOS/ambient\ background.jpg") ;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+
+}
+
+#registration .notice {
+color: #fff;
+}
+
+#registration .notice h1{
+  color: #fff;
+}
+#registration .notice .time{
+  display: flex;
+  margin-top: 40px;}
+
+#registration .notice .time .date{
+  text-align: center;
+  padding: 13px 33px;
+  background: rgb(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0;
+  margin-top: 10px;
+  font-weight: 600;
+
+}
+
+#registration .form h3{
+  font-size: 40px;
+  font: bold;
+  color: rgb(240, 240, 247);
+
+
+}
+#registration .form {
+  display: flex;
+  border-radius: 8px;
+  padding:50px ;
+  background: #fff;
+  flex-direction: column;
+  box-shadow: 10px 8px 32px 10px rgba(60, 70, 170, 0.5);
+  
+
+}
+
+#registration .form input{
+  margin: 15px 0;
+  padding: 15px 10px ;
+  border: 1px solid rgb(84, 40, 240);
+  outline: none;
+}
+#registration .form a.yellow{
+  color: #fff;;
+  background: goldenrod;
+  transition: 0.4s;
+  text-decoration:none ;
+  background-color: blanchedalmond;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  font-weight: 600 ;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#registration .form a.yellow:hover{
+  color: goldenrod;
+  background:#fff;
+}
+#registration .form input::placeholder{
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #757373;
+
+}
+#bloggers .services{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
+#bloggers .services .Salonservices{
+margin-left: -100px;
+padding: 15px;
+}
+#bloggers .services .Manicureservices{
+padding: 15px;}
+
+#bloggers .services .Barbershopservices{
+margin-left:-100px ;
+padding: 15px;
+
+}
+#bloggers .blog{
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  padding: left;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  flex-direction: row;
+
+
+
+}
+#bloggers .blog .photosanddetails{
+  background-image:url(SPAPHOTOS/beautiful-sky-line.jpg);
+}
+
+#bloggers .photosanddetails{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px;
+  height: 50%;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 20px;
+  background: rgb(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0;
+  margin-top: 10px;
+  font-weight: 600;
+}
+#bloggers .blog .photosanddetails img{
+  width: 100%;
+  inline-size: fit;
+  padding: -70px 2px;
+}#bloggers a{
+  text-decoration:none ;
+  background-color: blanchedalmond;
+  font-size: 2.4rem;
+  font-weight: 600 ;
+  border-radius: 5px;
+
+}
+#bloggers a.blue{
+  color: #fff;
+  background: goldenrod;
+  transition: 0.4s;
+} 
+
+.viewmore .bloggers
+{
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.viewmore .bloggers .blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px;
+}
+
+.viewmore .bloggers .photosanddetails {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  text-align: start;
+  padding: 30px;
+  width: calc(50% - 20px); /* Adjust width for two columns with gap */
+  margin-bottom: 20px;
+}
+
+.viewmore .bloggers .photosanddetails img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.pro-links{
+  margin-top: 10px;
+}
+
+.pro-links i{
+  padding: 10px 13px;
+  cursor: pointer;
+  border: 2px solid rgb(24, 24, 49);
+  transition: 0.3 ease;
+
+}
+.pro-links i:hover{
+  color: #fff;
+  background: rgb(25, 25, 93);
+  cursor: pointer;
+  border: 2px solid rgb(24, 24, 49);
+}
+.contacts{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.contacts .content {
+  margin-top: 100px;
+  max-width: 800px;
+  text-align: center;
+
+}
+.contacts .content p{
+  font-size:  18px;
+  font-weight: 300;
+  color: rgb(16, 8, 69);
+}
+.contactinfo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  flex-direction: left;
+}
+.box{
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: left;
+  
+}
+.box .text{
+  font-size:  20px;
+  font-weight: 200;
+  color: rgb(16, 8, 69);
+  display: inline-flexbox;
+  justify-content: center;
+  align-items: top;
+  flex-direction: column;
+}
+.box .text p{
+  font-size:  14px;
+  font-weight: 600;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.contacts .container h2{
+  display: flex;
+  flex-direction: row;
+  font-size:  25px;
+  font-weight: 500;
+  color: rgb(245, 245, 246);
+  margin-left: -30%;
+}
+.contact form{
+  font-size:  15px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 20%;
+  margin-top: 10px;
+  background:#0f1528;
+}
+
+.container .contactinfo .box .icon{
+  border-style:ridge;
+  border-radius: 50px;
+  background: #f2f2f4;
+  justify-content: center;
+ 
+}
+
+.form-group{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.form-group .placeholder{
+  min-width: fit-content;
+}
+.contact form .form-group label{
+  padding: 5px 0;
+  position: relative;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #757373;
+}
+.form-group input:focus ~ label{
+  color: goldenrod;
+  font-size: 12px;
+  transform: translatey(-20px); 
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 475px) {
+}
+
+
+/* experts */
+
+/* footer */
+
+/* About */
+
+/* Blog */
+
+/* Course_inner */
+
+/* contacts */
+
+/* responsive */
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 475px) {
+}

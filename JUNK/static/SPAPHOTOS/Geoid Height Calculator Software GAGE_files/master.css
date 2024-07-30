@@ -1,0 +1,871 @@
+@charset "utf-8";
+/*
+		CSS Document
+		UNAVCO Stylesheet for both HQ and Facility and associated sites
+		Edited: 2012-08-10 by J. Riley
+		Edited: 2011-11-03 by J. Riley
+		Edited: 2010-10-20 By: Jim Riley
+		Created: 2010-03-15 By: Jim Riley
+*/
+
+/*
+		shorthand notation for font properties
+		font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
+*/
+
+
+
+/** -- General -- **/
+body {
+	color:#666666;
+	min-height: 500px;
+}
+
+.main_container {background-color:#fff; padding-top:5px; min-width:1000px; max-width:2000px; min-height:800px; margin: 0 auto; width: 100%;}
+
+h1  { /* Using style from Yahoo base-min.css version: 3.2.0 for H1 tag */
+	font-size:3.2em;
+	color:#bdbdbd;
+	margin:.6em 0 0 0;			
+}
+span.bodytitle  { /* 2019-12-17 - JR - Delete this after re-templating. Using style from Yahoo base-min.css version: 3.2.0 for H1 tag (these spans need to be converted to H1!) */
+	/*font-size:138.5%;*/
+	font-size:3.2em;
+	color:#bdbdbd;
+	font-weight:bold;	
+	margin:1em 0;		
+}
+
+h2,h3,h4,h5{margin:1.45em 0 .25em 0;} /* changing margins (bottom) from base-min.css */
+
+h1 + ul, h2 + ul, h3 + ul, h4 + ul {margin-top:.25em} 
+
+.bigheader {
+  font-size: 3em;
+  font-weight:bold;
+  color: #CCC;
+  margin: 45px 0 0 0;
+}
+.bigheader2 {
+  font-size: 2em;
+  font-weight:bold;
+  color: #CCC;
+  margin: 40px 0 0 0;
+}
+.uv-button {width:120px; height:20px; display:block; padding:10px; margin:25px; background-color:#393; color:white; white-space:nowrap; line-height:1.5em;
+	border: 1px solid rgba(33, 68, 72, 0.59);
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	
+	text-align: center;
+	font: bold 1.2em/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	
+	background: -webkit-linear-gradient(top, #393, #2f5f63);
+	background: -moz-linear-gradient(top, #393, #2f5f63);
+	background: -o-linear-gradient(top, #393, #2f5f63);
+	background: -ms-linear-gradient(top, #393, #2f5f63);
+	background: linear-gradient(top, #393, #2f5f63);
+	
+	-webkit-box-shadow: 0 2px 0 #999999;
+	-moz-box-shadow: 0 2px 0 #999999;
+	box-shadow: 0 2px 0 #999999;
+	
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+a.uv-button {
+	text-decoration: none;
+}
+a.uv-button:hover {
+	background: #39AB39;
+	background: -webkit-linear-gradient(top, #39AB39 #2f5f63);
+	background: -moz-linear-gradient(top, #39AB39, #2f5f63);
+	background: -o-linear-gradient(top, #39AB39, #2f5f63);
+	background: -ms-linear-gradient(top, #39AB39, #2f5f63);
+	background: linear-gradient(top, #39AB39, #2f5f63);
+}
+
+a.uv-data-button {
+	display:inline-block;
+	padding:0.35em 1.2em;
+	border:0.1em solid #FFFFFF;
+	margin:0 0.3em 0.3em 0;
+	border-radius:0.12em;
+	box-sizing:border-box;
+	text-decoration:none !important;
+	font-size:1.25em;
+	font-family:'Roboto',sans-serif;
+	font-weight:300 !important;
+	color:#FFFFFF !important;
+	background-color:#74B251;
+	text-align:center;
+	transition:all 0.2s;
+	white-space:nowrap;
+}
+a.uv-data-button:hover {
+	background-color:#62d900;
+}
+a.uv-data-button:visited {
+	color:#FFFFFF !important;
+	font-weight:300 !important;
+	text-decoration:none !important;	
+}
+
+a.disabled{
+	pointer-events: none;
+    cursor: default;
+    color : #666666 !important;
+}
+
+@media all and (max-width:30em){
+ a.uv-data-button {
+  display:block;
+  margin:0.4em auto;
+ }
+}
+
+figure {margin:2.65em 1em; font-size:.95em}
+
+p {/* JR line-height:1.8em; */
+  /* The following hyphenation rules are not ready for primetime due to hyphenating people's names */
+  /* -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto; */
+}
+
+sup {vertical-align: super; font-size: smaller;}
+
+ul {line-height:1.35em;}
+li {margin-bottom:.5em;}
+/* li + ul, ol {margin-top:0em; margin-bottom:.4em}*/ /* remove too much white space with nested lists */
+li ul, li ol {margin-top:.1em; margin-bottom:.4em} /* remove too much white space with nested lists */
+
+/* table.uvtable thead {background-color:#c0c0c0; text-align:left} */
+table.uvtable thead {background-color:#D8D7D7; text-align:left} /* Trying out lighter palette */
+/* table.uvtable tbody {background-color:#eeeeee;} */
+table.uvtable tbody {background-color:#F7F7F7;} /* Trying out lighter palette */
+table.uvtable td, th {padding:7px; vertical-align:top}
+
+input {padding:.1em;}
+input:focus {outline-width:0;}
+
+/*hr {border:none; width:100%; height:.1em; color:#8E8E8E; background-color:#8E8E8E;}*/
+hr {border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3); margin-top:2.5em;}
+hr.header {margin-top:.3em; margin-bottom:2.5em; border:none; height:.1em; color:Silver; background-color:Silver;} /* Used on content pages under the page header */
+		
+h2.homepageSection2 {  float:left; color:rgb(172, 48, 48); font-size:1.3em; margin:.65em 0 1em 0; /* display:block; height:15px;*/} /* redesign2 */
+h2.homepageSection2 a { color:rgb(199, 17, 17); text-decoration:none; white-space:nowrap;} /* redesign2 */
+h2.homepageSection2 a:hover {color:#ccc;}
+a.view-all {font-size:.9em; float:right; color:#999; margin:.95em 0 0 2em; text-decoration:none; white-space:nowrap; display:block} /* redesign2 */
+a.view-all:hover {color:#000;} /* redesign2 */
+a.view-all:after {content: " »"} /* redesign2 */
+
+p.comments	{					/* for the "Comments or questions about this page? Send e-mail to..." paragraph at the bottom of some Facility pages */
+  font-size: 11px;
+  font-style: italic;
+  margin-top: 80px;
+  text-align: center;
+}	
+p.lastmod	{					/* for the last modified part of every page at the bottom */
+/*
+NOTE: This can possibly go away now that it --appears-- the FNP lastmod date is actually returning the content file's last mod date and not the footer file's last mod date. 
+We would have to search/replace the entire site with REGX to remove.
+NOTE: Not all last mod dates use this class, some set the style inline.
+*/
+	font-size: 10px;
+	margin-top: 40px;
+	}
+
+/* Use the following class to clear floats */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+.clearfix:after {
+  clear: both;
+} 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+
+
+/** -- Section Page Styles -- **/
+h1.sect {color:#AA0000 !important;}
+h2.sect {color:#666 !important; float:left !important; margin:0 0 0 1.5em !important;}
+h2.sect a {color:#666 !important; font-size:1.3em !important; font-weight:bold !important; text-decoration:none !important;}
+h2.sect a:hover{color:#ccc !important; font-size:1.3em !important; font-weight:bold !important; text-decoration: underline !important;}
+.sectThumb {width:180px; float:left; border:#CCC thin solid;}
+a:hover .sectThumb {border:#FC0 thin solid; opacity:0.6; filter:alpha(opacity=60); /* For IE8 and earlier */}
+div.sect-sub-topic {border-top:#eaeaea thin solid; padding:1.5em 0 0 0; margin:0 0 20px 0;}
+div.sect-sub-topic p {margin-block-start: 0em;}
+div.sect-sub-topic a {color:#0066BB; font-weight:bolder; text-decoration:none;}
+div.sect-sub-topic a:visited {color:#4D4DB7;}
+div.sect-sub-topic a:hover {text-decoration:underline;}
+div.sect-sub-topic ul {margin:0 0 0 0; margin-block-start: 0em; padding-inline-start: 0em;}
+div.sect-sub-topic ul ul {margin:1em 0 0 0; font-size:smaller ;}
+div.sect-sub-topic ul li {list-style:none; margin-bottom: .7em;}
+.sect-index-watermark {
+display:block;
+float:left;
+position:relative;
+top:45px;
+left:60px;
+font-size:56px;
+font-weight:bold;
+color:#f4f4f4;
+margin:0;
+padding:0;
+/* Safari */
+-webkit-transform: rotate(-90deg);
+/* Firefox */
+-moz-transform: rotate(-90deg);
+/* IE */
+-ms-transform: rotate(-90deg);
+/* Opera */
+-o-transform: rotate(-90deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+ul.sect-index-links {color: #999; font-size:.95em; margin:26px 0 0 162px; line-height:1.5em;}
+ul.sect-index-links li {margin-bottom:.5em; list-style:none;}
+ul.sect-index-links a {color: #999;  text-decoration:none; display:block; padding-left:5px} /* 2015-08-10 - Added display:block */
+ul.sect-index-links a:hover {color: #666; text-decoration:underline; background-color:#ddd }	/* 2015-08-10 - Added background-color:#ddd */
+
+/** -- Sub-Section Page Styles -- **/
+img.sub-sect-left {
+	width:220px; 
+	float:left;
+	margin:5px 25px 25px 0;
+	border:#CCC thin solid;	
+}
+.sub-sect-intro {
+	float:left; width:500px;
+}
+.sub-sect-body {
+    /*width : 750px;*/
+	min-width:750px;
+}
+.sub-sect-h3 {
+	font-size:2.5em; color:#CCC; margin:30px 0px 10px 0;
+}
+.sub-sect-topics-list {
+	margin-top:1.25em;
+}
+.sub-sect-topics-list li {
+	margin-bottom:1.5em;
+}
+
+/** -- Navigation -- **/
+ul.nav { margin:0;padding:0;}
+ul.nav {
+  position:relative;
+  max-width:100%;
+  height:2.5em;
+  line-height:1em;
+}
+ul.nav li {
+	float:left;
+	text-align:center;
+	list-style-type:none;
+	font-weight:normal;
+}
+
+ul.nav li a {
+	display:block;
+	padding:0 .55em;
+}
+
+
+/** -- Global Navigation -- **/
+ul.globalnav li a {
+	text-decoration:none;
+	font-size:.9em;
+	font-weight:bold;
+	height: 11px;
+	border:0;
+	color:#AEAEAE;	
+	border-right:solid 1px #000;
+	/*background:#fff;*/
+}
+
+ul.globalnav li a:focus {
+	color:#000;
+	background:#fff;
+	}
+ul.globalnav li ul li a:hover {
+  color:#933b2b;
+  /*background:#fff;*/
+	}
+
+ul.globalnav li:hover a {
+  color:#000;
+  /*background:#fff;*/
+  font-weight:bold;
+	}
+
+ul.globalnav li:hover a:active {
+	/*background:#fff;*/
+	}
+
+
+/** -- Cross-Cutting Navigation -- **/
+/* 2015-08-07 - Added CSS Dropdown menus for Beta testing - J. Riley */
+ul.main {
+	float:none;
+	position:relative;
+	top:-22px;
+	left:398px;
+	width:596px;
+	text-align:center;
+	background:none;
+	padding:0;
+	margin:0;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:.94em;
+	z-index:55;
+}
+ul.main a {
+	color:#fff;
+	text-decoration:none;
+}
+ul.main li {
+	display:inline-block;
+	cursor: pointer;
+	position:relative;
+}
+ul.main li a.cc-main {
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+	font-size:1.15em;
+	font-family:Arial, Helvetica, sans-serif;
+	/* height:2.2em; */
+	height:2.1em;
+	line-height:2.5em;
+	border-left:#FFF 1px solid;
+	border-right:#FFF 1px solid;
+	color:#000;
+	}	
+ul.main li a.cc-main:focus {
+	color:#920000;
+	}
+ul.main li:hover a.cc-main {
+	/*color:#920000;
+	text-decoration:underline;
+	*/
+	color:white;
+	background-color:#A12117;
+   z-index:55;
+   
+	}
+/* This nav scheme uses a body ID in each cc page to identify current cc nav section */ 
+#Data ul.main li#nav-data a.cc-main, #Instrumentation ul.main li#nav-instrumentation a.cc-main, #Projects ul.main li#nav-projects a.cc-main, #Software ul.main li#nav-software a.cc-main, #Education ul.main li#nav-education a.cc-main, #Community ul.main li#nav-community a.cc-main, #Science ul.main li#nav-science a.cc-main {
+	/*color:#920000; */
+	color:white;
+	background-color:#ce291e;
+	border-left:#FFF 1px solid;
+	border-right:#FFF 1px solid;
+	z-index:55;
+	}
+/* Drop downs */
+ul.main li ul {
+	border-top: #ce291e 10px solid;
+	text-align:left;
+	float:none;
+	background-color:#A12117;
+	margin:0px;	
+	padding: 10px 0 0 0;
+	position: absolute;
+	top: 29px;
+	left: 0;
+	width: 200px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transiton: opacity 0.6s;
+	-moz-transition: opacity 0.6s;
+	-ms-transition: opacity 0.6s;
+	-o-transition: opacity 0.6s;
+	-transition: opacity 0.6s;
+}
+ul.main li ul.right-menu {   
+  left: -84px;  
+}
+ul.main li ul.right-menu-2nd-from-right {   
+  left: -20px;  
+}
+ul.main li ul li { 
+  /*background: #555; */
+  font-weight:bold;
+  text-align:left;
+   float:none;
+   display: block; 
+  color: #fff;
+  border:none;
+}
+ul.main li ul li a {
+	display:block;
+	padding: 5px;
+}
+ul.main li ul li:hover { background: #ce291e; }
+ul.main li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/** -- Highlight Nav -- **/
+	/* Old way to get rounded image corners using image mask. Messed up highlight cycle mouseover pause. */
+	/*img.mask {position:absolute; top:76.5px; left:-1px; z-index:100}*/
+	
+	/* Rounded image corners with CSS Background-Image Trick - This styles a span that wraps the original image and also uses the original image as its background. Doesn't work in IE8. Should work in IE 9*/
+	.rounded-img {
+	display: inline-block;
+	float:left;
+	border: solid 3px #FFF;
+	overflow: hidden;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	}
+	
+
+	/* JQuery Cycle Plugin Nav for rotator */
+	/* Note: CSS is used here to take larger "front" image and make a virtual CSS thumbnails */
+	#navx { width:300px; height:62px; position:relative; top:-45px; left:201px; margin:0;}
+	#navx li { width:46px; float:left; margin:0 10px 0 0; list-style:none }
+	#navx a { width:46px; float:left; overflow:hidden; padding:0; display:block; border:2px solid #666; 
+	opacity:0.75;
+	filter:alpha(opacity=75); /* for IE5-7 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /* first! for IE8 */
+	}
+	#navx a.activeA, #navx a:hover { border-color:#C33; 
+	opacity:1;
+	filter:alpha(opacity=100); /* for IE5-7 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* first! for IE8 */
+	}	
+	#navx a:focus { outline:none; }
+	#navx img { border:none; display:block; margin-bottom:-10px; position:relative; top:-5px }
+	
+	#hlite {position:relative; top:-40px; margin-bottom:-40px; overflow:hidden;}
+	#hlite img { float:left; margin-right:20px;}
+	
+		/* Testing homepage redesign2 here 2012-08-08*/
+		#navx2 { width:56px; height:440px; float:left; margin:0 7px 0 0;} /* redesign2 */
+		#navx2 li { width:51px; height:51px; margin:0 0 10px 0; list-style:none } /* redesign2 */
+		#navx2 a { width:51px; height:51px; overflow:hidden; padding:0; display:block; border:2px solid #666; 
+		opacity:0.75;
+		filter:alpha(opacity=75); /* for IE5-7 */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; /* first! for IE8 */
+		} /* redesign2 */
+		#navx2 a.activeA, #navx2 a:hover { border-color:#C33; 
+		opacity:1;
+		filter:alpha(opacity=100); /* for IE5-7 */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* first! for IE8 */
+		} /* redesign2 */
+		#navx2 a:focus { outline:none; } /* redesign2 */
+		#navx2 img { border:none; display:block; margin-bottom:-10px; position:relative; left:-9px } /* Use position here to center virtual thumbnails. Use "left" for landscape and "top" for portrait source images /* redesign2 */
+		
+		#hlites {position:relative; margin:0 0 -40px 0; overflow:hidden; z-index:0} /* redesign2 */
+		#hlites img { } /* redesign2 */
+		/* End redesign2 test */
+	/* End JQuery Cycle Plugin Nav for rotator */
+.highlight {display:none; height:470px; float:left; margin:0 0 0 0;} /* redesign2 */
+.snapshot {display:none; height:470px; float:left; margin:0 0 0 0;} /* redesign2 */
+.snapshot img, .highlight img {border:#EEEEEE 1px solid} /* redesign2 */
+h3.hl-title2, h3.hl-title2 a {color:#69F; font-size:1.125em; font-weight:bold; margin-top:.8em; margin-bottom:.2em; text-decoration: none; display:block} /* redesign2 */
+h3.hl-title2 a:hover {color:#ccc}
+.hidetxt{ display: none;} /* redesign2 */
+p.hl-date2 {color:#626262; font-weight: bolder; font-size:.95em; margin:.5em 0 .5em 0} /* redesign2 */
+p.hl-text2, p.snap-text {margin:0em 0 0 0; color:#4C4C4C; text-align:left;} /* redesign2 */
+p.hl-text2:after, p.snap-text:after {content: "..."} /* redesign2 */
+.hl-more2 {font-weight:bold; margin:0 0 0 0; color:#69F; text-decoration:none; display:block} /* redesign2 */
+.hl-more2:after {content: " »"} /* redesign2 */
+.hl-more2:hover {color:#ccc}
+
+/** -- Breadcrumb Nav -- **/
+div.crumb { margin: 0 0 1.75em 0;}
+div.crumb a {font-size:1.15em;}
+div.crumb img {height:.55rem; margin: 0 .2rem 0 .2rem}
+div.crumb a:link { text-decoration:none; color:#920000}
+div.crumb a:visited { text-decoration:none; color:#920000}
+div.crumb a:hover { text-decoration:underline; color:red}
+
+
+
+/** -- What's Hot -- **/
+ul.whats-hot2 {margin:0; clear:both} /* redesign2 */
+ul.whats-hot2 li {list-style:none; margin-top:.5em; padding-bottom:.35em; border-bottom-color:#B8B8B8; border-bottom-style:solid; border-bottom-width:.1em;} /* redesign2 */
+ul.whats-hot2 li a {text-decoration:none; color:#4C4C4C; display:block; font-weight: 600; padding:.2em} /* redesign2 */
+ul.whats-hot2 li a:hover {color:#C33; font-weight: 600; background-color: rgb(226, 226, 226)} /* redesign2 */
+ul.whats-hot li {list-style:none; margin-top:1.5em; padding-bottom:.35em; border-bottom-color:#B8B8B8; border-bottom-style:solid; border-bottom-width:.1em;
+}
+ul.whats-hot li a {text-decoration:none; color:#4C4C4C;
+}
+ul.whats-hot li a:hover {color:#C33;
+}
+
+
+
+/** -- Flat Navigation Panel / Footer -- **/
+a.title, span.title, a.title2, span.title2  {
+	display: block;
+	margin:0em 0em -1.2em -1.2em; 
+	font-size: 1.125em;
+	text-decoration: none;
+	font-weight: bold;
+	}
+a.title, span.title  {		
+	color: #C33;		
+	}
+a.title2, span.title2  {		
+	color: #C60;		
+	}
+/* Added 2015-04-24 - to help setup pre's in a friendlier way - J. Riley */
+pre {
+	tab-size: 2;
+	white-space: pre-wrap;
+	font-size: 1.12em;
+}
+/* NOTE: span display fix for Swagger Web services documentation xml output. It uses span.title! */
+pre code span.title {
+	display:inline !important;
+	margin:0 !important;
+}
+a.title:hover, a.title2:hover  {
+	color: #ff9933;
+	}
+  /* Grey subsection titles */
+ul.section {
+	margin-top: .12em;
+	margin-left:0em;
+	margin-bottom: 1.5em;
+	padding-left:0em;
+	text-indent:0em;
+}
+ul.section li {
+	list-style-image:url(../images/arrow-bullet.png);
+	margin:.15em 0 .15em 0;
+}	
+a.section {
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #999;
+	text-decoration: none;
+	}
+a.section:hover {
+	color: #000000;
+	}
+.footer {	
+	font-size:.9em;
+	color:#999;
+}
+.footer a {
+	color:#999;
+	text-decoration:none;
+}
+.footer a:hover {
+	color : #000000;
+	}
+
+
+
+
+/*	Sidebar Navigation	*/
+
+/* The following should be used when we redo all side navs to use UL's
+#nav ul {
+	margin:0em 0em 0em .2em;
+}
+#nav li:before { 
+	font-weight:bold;
+   	content: '·';
+    position:absolute;
+    right:100%
+}
+#nav li {
+    list-style:none;
+    position:relative;
+}
+*/
+/* or perhaps better yet, try this in order to not make the custom bullet be part of text selection, underlining current items, and maintain margins on line wraps.
+#nav ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+}
+
+#nav li:before {
+    content: "►";
+    display: block;
+    float: left;
+    width: 1.2em;
+    color: #ff0000;
+}
+*/
+/* Set my own bullet •, since menu items are not yet list items in an UL, and even if they were the bullet sizes are too big, so I'm also using the · dot operator */
+.third_level_nav:before, .third_level_nav_current:before, .third_level_nav_current_last:before, .fourth_level_nav:before, .fourth_level_nav_current:before, .fourth_level_nav_current_last:before, .fifth_level_nav:before, .fifth_level_nav_current:before, .fifth_level_nav_current_last:before, .sixth_level_nav:before, .sixth_level_nav_current:before, .sixth_level_nav_current_last:before {
+   	display:block;
+    float:left;
+    width:.6em;
+	font-weight:bold;
+	font-size:inherit;
+}
+.third_level_nav:before, .third_level_nav_current:before, .third_level_nav_current_last:before {
+   	content: "\2022";    
+}
+.fourth_level_nav:before, .fourth_level_nav_current:before, .fourth_level_nav_current_last:before, .fifth_level_nav:before, .fifth_level_nav_current:before, .fifth_level_nav_current_last:before, .sixth_level_nav:before, .sixth_level_nav_current:before, .sixth_level_nav_current_last:before {
+   	content: "\2219";
+}
+/*.third_level_nav_current:before, .fourth_level_nav_current:before, .fifth_level_nav_current:before, .sixth_level_nav_current:before {
+   	content: '►  ';
+    display: block;
+    float: left;
+    width: .9em;
+	font-size: .9em;
+}*/
+.third_level_nav, .third_level_nav_current, .third_level_nav_current_last, .fourth_level_nav, .fourth_level_nav_current, .fourth_level_nav_current_last, .fifth_level_nav, .fifth_level_nav_current, .fifth_level_nav_current_last, .sixth_level_nav, .sixth_level_nav_current, .sixth_level_nav_current_last {
+    position:relative;
+}
+.second_level_nav_current_last, .third_level_nav_current_last, .third_level_nav_current_last:before, .fourth_level_nav_current_last, .fourth_level_nav_current_last:before, .fifth_level_nav_current_last, .fifth_level_nav_current_last:before, .sixth_level_nav_current_last, .sixth_level_nav_current_last:before {
+    color:#fff !important;
+	background-color:#ce291e !important;
+	font-weight:bold !important;
+}
+/* second_level_nav */	
+	.second_level_nav, .second_level_nav_current, .second_level_nav_current_last { 
+		display:block;
+		/*text-indent: -15px;*/
+		margin-left:0;
+		padding:2.5px 0 2.5px 4px;
+		font-size:1.5em; /*was 15px */
+		font-weight:bold;
+		/*color : #cc3300;*/
+		/*color:#C33;*/
+		color:#666;
+		text-decoration:none;
+		}
+	/* this second instance of a.second_level_nav_current overides the color because it occurs last*/
+	.second_level_nav_current  {
+		/*color : #ff9900;*/
+		/*color:#C60;*/
+		/*color: #999966;*/
+		color:#920000;
+		}
+	.second_level_nav:hover, .second_level_nav_current:hover  {
+		color:#ce291e;
+		/*background-color:#FFE36F;*/
+		background-color:#dddddd;
+		}	
+		
+/* third_level_nav */	
+	.third_level_nav, .third_level_nav_current, .third_level_nav_current_last { 
+		display: block;
+		text-indent:-.6em; /* the width of the custom bullet :before content */
+		margin-left:0;
+		padding:2.5px 10px 2.5px .8em; /* Continue to add the width of the custom bullet :before content to the previous level's left padding */
+		font-size:1.125em; /*was 12px */
+		font-weight:normal;
+		/*color : #cc3300;*/
+		/*color:#C33;*/
+		color:#666;
+		text-decoration:none;
+		}
+	/* this second instance of a.second_level_nav_current overides the color because it occurs last*/
+	.third_level_nav_current {
+		/*color : #ff9900;*/
+		/*color:#C60;*/
+		color:#920000;
+		font-weight:bold;
+		}
+	.third_level_nav:hover, .third_level_nav_current:hover {
+		color:#ce291e;
+		background-color:#dddddd;
+		}
+			
+			
+/* fourth_level_nav */
+	.fourth_level_nav, .fourth_level_nav_current, .fourth_level_nav_current_last {
+		display:block;
+		text-indent:-.6em; /* the width of the custom bullet :before content */
+		margin-left:0;
+		padding:2.5px 0 2.5px 1.2em; /* Continue to add the width of the custom bullet :before content to the previous level's left padding */
+		font-size:1em; /*was 10px */
+		color:#666;
+		text-decoration:none;
+		}
+	/* this second instance of fourth_level_nav_current overides the color because it occurs last*/
+	.fourth_level_nav_current, .fourth_level_nav_current_last  {
+		/*color: #ffffff;*/
+		color:#920000;
+		font-weight:bold;		
+		}
+	.fourth_level_nav:hover, .fourth_level_nav_current:hover {
+		color:#ce291e;
+		background-color:#dddddd;
+		}
+	
+	
+/* "fifth_level_nav" - trying out this additional level - not used consistently yet (see suominet)*/
+	.fifth_level_nav, .fifth_level_nav_current, .fifth_level_nav_current_last {
+		display: block;
+		text-indent: -.6em; /* the width of the custom bullet :before content */
+		margin-left: 0;
+		padding: 2.5px 0 2.5px 1.8em; /* Continue to add the width of the custom bullet :before content to the previous level's left padding */
+		font-size: .9em; /*was 9px */
+		color: #666;
+		text-decoration: none;
+		}	
+	/* this second instance of fifth_level_nav_current overides the color because it occurs last*/
+	.fifth_level_nav_current, .fifth_level_nav_current_last {
+		/*color : #cccc99;*/
+		color:#920000;
+		font-weight:bold;
+	}
+	.fifth_level_nav:hover, .fifth_level_nav_current:hover {
+		color:#ce291e;
+		background-color:#dddddd;
+	}
+	
+/* "sixth_level_nav" - trying out this additional level - not used consistently yet (see suominet)*/
+	.sixth_level_nav, .sixth_level_nav_current, .sixth_level_nav_current_last {
+		display: block;
+		text-indent: -.6em; /* the width of the custom bullet :before content */
+		margin-left: 0;
+		padding: 2.5px 0 2.5px 2.4em; /* Continue to add the width of the custom bullet :before content to the previous level's left padding */
+		font-size: 9.5px; /*was 9px */
+		color: #666;
+		text-decoration: none;
+		}	
+	/* this second instance of fifth_level_nav_current overides the color because it occurs last*/
+	.sixth_level_nav_current, .sixth_level_nav_current_last {
+		/*color : #cccc99;*/
+		color:#920000;
+		font-weight:bold;
+	}
+	.sixth_level_nav:hover, .sixth_level_nav_current:hover {
+		color:#ce291e;
+		background-color:#dddddd;
+	}
+
+	/* Related Link Nav - for Related Links sub-nav in sidebar */
+	div.related-nav {
+		background-color:#F2F2F2; color:#999; padding:5px; margin-top:15px;
+	}
+	div.related-nav h4 {
+		color: #FFF; font-size: 1.15em; margin:-5px; padding-left:5px; display:block; background-color: #9E9E9E;
+	}
+	div.related-nav ul {
+		margin:10px 5px 0 0;
+	}
+	div.related-nav ul ul {
+		margin:-4px 5px 0 15px;
+	}
+	div.related-nav ul li a {
+		display:block; text-decoration:none; font-weight:bold; color:#999; font-style:italic;
+	}
+	div.related-nav ul li a:hover {
+		text-decoration:underline; font-weight:bold; color:#000; font-style:italic;
+	}
+	/* End Related Link Nav */
+
+	
+/* End of Sidebar Navigation */	
+
+
+
+
+/* Polar section list-based navigation */
+/* 2009-09-22 */
+
+ul#navlist, 
+.polar-nav-list {
+  margin: 0 0 0 0;
+  padding: 10px 0;
+  white-space: nowrap;
+  font-weight:bold;
+}
+
+#navlist li, 
+.polar-nav-list li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#navlist a, 
+.polar-nav-list a {
+	padding: 3px 10px;
+}
+
+#navlist a:link,
+#navlist a:visited,
+.polar-nav-list a:link,
+.polar-nav-list a:visited {
+	color: #fff;
+	background-color: #369;
+	text-decoration: none;
+}
+
+#navlist a:hover,
+.polar-nav-list a:hover {
+	color: #fff;
+	background-color: #ea0;
+	text-decoration: none;
+}
+
+
+
+/* Icon insertions */
+
+a.external {
+display:inline-block;
+line-height:15px; /* check your icon height */
+background:url(/lib/images/small-icons/small-url-external.png)  center right no-repeat;
+padding-right:20px;
+}
+
+/* Fixed width */
+/* 2011-11-08 */
+.fixed-body {
+width: 780px;
+min-height: 800px;
+margin: 15px 0 0 0;
+border-right: 1px solid #dedede;
+padding-right: 20px;
+}
+
+/* Style text input placeholder text */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    #ccc;
+	font-weight:bold;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ccc;
+   opacity:  1;
+   font-weight:bold;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ccc;
+   opacity:  1;
+   font-weight:bold;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ccc;
+   font-weight:bold;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #ccc;
+   font-weight:bold;
+}

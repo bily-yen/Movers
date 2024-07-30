@@ -1,0 +1,511 @@
+/*
+	Variable Grid System (Fluid Version).
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_20 {
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16,
+.grid_17,
+.grid_18,
+.grid_19,
+.grid_20 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 20 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_20 .grid_1 {
+	width:3.0%;
+}
+
+.container_20 .grid_2 {
+	width:8.0%;
+}
+
+.container_20 .grid_3 {
+	width:13.0%;
+}
+
+.container_20 .grid_4 {
+	width:18.0%;
+}
+
+.container_20 .grid_5 {
+	width:23.0%;
+}
+
+.container_20 .grid_6 {
+	width:28.0%;
+}
+
+.container_20 .grid_7 {
+	width:33.0%;
+}
+
+.container_20 .grid_8 {
+	width:38.0%;
+}
+
+.container_20 .grid_9 {
+	width:43.0%;
+}
+
+.container_20 .grid_10 {
+	width:48.0%;
+}
+
+.container_20 .grid_11 {
+	width:53.0%;
+}
+
+.container_20 .grid_12 {
+	width:58.0%;
+}
+
+.container_20 .grid_13 {
+	width:63.0%;
+}
+
+.container_20 .grid_14 {
+	width:68.0%;
+}
+
+.container_20 .grid_15 {
+	width:73.0%;
+}
+
+.container_20 .grid_16 {
+	width:78.0%;
+}
+
+.container_20 .grid_17 {
+	width:83.0%;
+}
+
+.container_20 .grid_18 {
+	width:88.0%;
+}
+
+.container_20 .grid_19 {
+	width:93.0%;
+}
+
+.container_20 .grid_20 {
+	width:98.0%;
+}
+
+
+
+/* Prefix Extra Space >> 20 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_20 .prefix_1 {
+	padding-left:5.0%;
+}
+
+.container_20 .prefix_2 {
+	padding-left:10.0%;
+}
+
+.container_20 .prefix_3 {
+	padding-left:15.0%;
+}
+
+.container_20 .prefix_4 {
+	padding-left:20.0%;
+}
+
+.container_20 .prefix_5 {
+	padding-left:25.0%;
+}
+
+.container_20 .prefix_6 {
+	padding-left:30.0%;
+}
+
+.container_20 .prefix_7 {
+	padding-left:35.0%;
+}
+
+.container_20 .prefix_8 {
+	padding-left:40.0%;
+}
+
+.container_20 .prefix_9 {
+	padding-left:45.0%;
+}
+
+.container_20 .prefix_10 {
+	padding-left:50.0%;
+}
+
+.container_20 .prefix_11 {
+	padding-left:55.0%;
+}
+
+.container_20 .prefix_12 {
+	padding-left:60.0%;
+}
+
+.container_20 .prefix_13 {
+	padding-left:65.0%;
+}
+
+.container_20 .prefix_14 {
+	padding-left:70.0%;
+}
+
+.container_20 .prefix_15 {
+	padding-left:75.0%;
+}
+
+.container_20 .prefix_16 {
+	padding-left:80.0%;
+}
+
+.container_20 .prefix_17 {
+	padding-left:85.0%;
+}
+
+.container_20 .prefix_18 {
+	padding-left:90.0%;
+}
+
+.container_20 .prefix_19 {
+	padding-left:95.0%;
+}
+
+
+
+/* Suffix Extra Space >> 20 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_20 .suffix_1 {
+	padding-right:5.0%;
+}
+
+.container_20 .suffix_2 {
+	padding-right:10.0%;
+}
+
+.container_20 .suffix_3 {
+	padding-right:15.0%;
+}
+
+.container_20 .suffix_4 {
+	padding-right:20.0%;
+}
+
+.container_20 .suffix_5 {
+	padding-right:25.0%;
+}
+
+.container_20 .suffix_6 {
+	padding-right:30.0%;
+}
+
+.container_20 .suffix_7 {
+	padding-right:35.0%;
+}
+
+.container_20 .suffix_8 {
+	padding-right:40.0%;
+}
+
+.container_20 .suffix_9 {
+	padding-right:45.0%;
+}
+
+.container_20 .suffix_10 {
+	padding-right:50.0%;
+}
+
+.container_20 .suffix_11 {
+	padding-right:55.0%;
+}
+
+.container_20 .suffix_12 {
+	padding-right:60.0%;
+}
+
+.container_20 .suffix_13 {
+	padding-right:65.0%;
+}
+
+.container_20 .suffix_14 {
+	padding-right:70.0%;
+}
+
+.container_20 .suffix_15 {
+	padding-right:75.0%;
+}
+
+.container_20 .suffix_16 {
+	padding-right:80.0%;
+}
+
+.container_20 .suffix_17 {
+	padding-right:85.0%;
+}
+
+.container_20 .suffix_18 {
+	padding-right:90.0%;
+}
+
+.container_20 .suffix_19 {
+	padding-right:95.0%;
+}
+
+
+
+/* Push Space >> 20 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_20 .push_1 {
+	left:5.0%;
+}
+
+.container_20 .push_2 {
+	left:10.0%;
+}
+
+.container_20 .push_3 {
+	left:15.0%;
+}
+
+.container_20 .push_4 {
+	left:20.0%;
+}
+
+.container_20 .push_5 {
+	left:25.0%;
+}
+
+.container_20 .push_6 {
+	left:30.0%;
+}
+
+.container_20 .push_7 {
+	left:35.0%;
+}
+
+.container_20 .push_8 {
+	left:40.0%;
+}
+
+.container_20 .push_9 {
+	left:45.0%;
+}
+
+.container_20 .push_10 {
+	left:50.0%;
+}
+
+.container_20 .push_11 {
+	left:55.0%;
+}
+
+.container_20 .push_12 {
+	left:60.0%;
+}
+
+.container_20 .push_13 {
+	left:65.0%;
+}
+
+.container_20 .push_14 {
+	left:70.0%;
+}
+
+.container_20 .push_15 {
+	left:75.0%;
+}
+
+.container_20 .push_16 {
+	left:80.0%;
+}
+
+.container_20 .push_17 {
+	left:85.0%;
+}
+
+.container_20 .push_18 {
+	left:90.0%;
+}
+
+.container_20 .push_19 {
+	left:95.0%;
+}
+
+
+
+/* Pull Space >> 20 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container_20 .pull_1 {
+	left:-5.0%;
+}
+
+.container_20 .pull_2 {
+	left:-10.0%;
+}
+
+.container_20 .pull_3 {
+	left:-15.0%;
+}
+
+.container_20 .pull_4 {
+	left:-20.0%;
+}
+
+.container_20 .pull_5 {
+	left:-25.0%;
+}
+
+.container_20 .pull_6 {
+	left:-30.0%;
+}
+
+.container_20 .pull_7 {
+	left:-35.0%;
+}
+
+.container_20 .pull_8 {
+	left:-40.0%;
+}
+
+.container_20 .pull_9 {
+	left:-45.0%;
+}
+
+.container_20 .pull_10 {
+	left:-50.0%;
+}
+
+.container_20 .pull_11 {
+	left:-55.0%;
+}
+
+.container_20 .pull_12 {
+	left:-60.0%;
+}
+
+.container_20 .pull_13 {
+	left:-65.0%;
+}
+
+.container_20 .pull_14 {
+	left:-70.0%;
+}
+
+.container_20 .pull_15 {
+	left:-75.0%;
+}
+
+.container_20 .pull_16 {
+	left:-80.0%;
+}
+
+.container_20 .pull_17 {
+	left:-85.0%;
+}
+
+.container_20 .pull_18 {
+	left:-90.0%;
+}
+
+.container_20 .pull_19 {
+	left:-95.0%;
+}
+
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}

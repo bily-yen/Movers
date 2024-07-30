@@ -1,0 +1,15 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.2.0
+build: 2676
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:n,i,b,bi&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {font-family: 'Open Sans', Helvetica, Arial, sans-serif;}
+
+/*
+body{font-family: 'Open Sans', sans-serif; font:13px/1.231 'Open Sans', Helvetica, Arial, sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% 'Open Sans', Helvetica, Arial, sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+*/

@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('/lib/styles/base-min.css');
+/*
+		CSS Document
+		UNAVCO Print Stylesheet for both HQ and Facility and associated sites
+	  Edited: 2011-07-15 By: Jim Riley
+		Created: 2011-07-15 By: Jim Riley
+*/
+
+/*
+		shorthand notation for font properties
+		font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
+*/
+
+* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+
+/*Reset Style*/
+body {margin:0; padding:0; line-height:1.4em; word-spacing:1px; letter-spacing:0.2px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; color:#000;}
+
+/** -- General -- **/
+body {width:1024px; font-size:.85em}
+#body {width:100%;}
+
+h1,h2,h3 {margin:1.45em 0 .25em 0;} /* changing margins (bottom) from base-min.css */
+
+h1 + ul, h2 + ul, h3 + ul {margin-top:.25em} 
+
+table {
+	border-collapse:collapse
+}
+th {
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color:#CCC;
+	vertical-align: middle;
+	text-align: left;
+}
+tr {
+	height: .8em;
+}
+td {
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color:#CCC;
+	padding: 2px 4px 2px 2px;
+	text-align: left;
+}
+
+thead, tr, img { page-break-inside: avoid; }
+
+p, h2, h3 { orphans: 3; widows: 3; }
+h1, h2, h3 { page-break-after: avoid; }
+
+.main_container {width:100%; min-width:100%; max-width:100%; float:none;}
+
+.noprint {display:none;}
+
+span.bodytitle { /* Using style from Yahoo bas-min.css version: 3.2.0 for H1 tag (these spans need to be converted to H1!) */
+		font-size:1.5em;
+		font-weight:bold;	
+		margin:4em 0em 1em 0em;		
+		}
+		
+.crumb {margin:0em 0em 2em 0em}
+
+td a:link:after, p a:link:after {
+	font-size:.75em;
+	color:#CCC;
+	text-decoration:none;		
+	content: " (" attr(href) ") ";
+}

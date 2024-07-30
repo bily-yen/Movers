@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="no-email-collection" content="/terms-of-use.html">
+  <title>Geoid Height Calculator | Software | GAGE</title>  
+  
+  <meta name="Description" content="The GAGE Facility operated by EarthScope Consortium, a non-profit university-governed consortium, facilitates geoscience research and education using geodesy.">  <meta name="Keywords" content="GAGE Facility, GAGE, EarthScope Consortium, EarthScope, UNAVCO, University NAVSTAR Consortium, Earth Science, Geodesy, Geophysics, Crustal Motion, Deformation, Plate Tectonics, Education and Outreach, Plate Boundary Observatory, PBO, Polar Research, SNARF, POLENET, RESESS, GEON, INTERFACE, Research Consortium, GNSS, GPS, GPS Equipment, GPS Surveying, Kinematic Survey, RTK, GPS Stations, GNSS Stations, GNSS Data, Realtime GNSS, GPS Data, Data Archive, Data Maps, LiDAR, LASER Mapping, Laser Scanning, TLS, Terrestrial Laser Scanning, Strainmeter, SAR, Synthetic Aperture Radar, InSAR, WInSAR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="qTe4-AHwN6zvuhjlWjMYUCHWs9QYzwuEtJqMrBgRiFA">
+  <meta name="p:domain_verify" content="92e56195043202ab4c17cfd30c168fb7"><!-- for Pinterest stats -->
+  <link rel="icon" href="https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-180x180.png">
+  <meta name="msapplication-TileImage" content="https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-270x270.png">  
+  <link rel="stylesheet" type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/reset-modern.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/fonts-min-modern.css">
+  
+  <!-- <link rel="stylesheet" type="text/css" href="/lib/styles/reset.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/lib/styles/base-min.css" />
+  <link rel="stylesheet" type="text/css" href="/lib/styles/fonts-min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/var-960-20col-fluid.css"><!-- <==Variable for fluid layout -->  
+    <link rel="stylesheet" type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/master.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/print.css" media="print">
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="text/javascript" async="" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/f.txt"></script><script defer="defer" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-7C4D87BNPM');
+	</script>
+  <!-- Google Analytics End -->
+  
+
+  <script type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/jquery-1.11.0.min.js"></script>
+  <script defer="defer" type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/jquery-migrate-1.2.1.min.js"></script><!-- Comment this out for debugging old jquery code. Also see dev version of migrate to get helpful warnings sent to browser consoles. -->
+  <script defer="defer" type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/loader.js"></script>
+  <script defer="defer" type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/uv-search.js"></script>
+<script src="Geoid%20Height%20Calculator%20Software%20GAGE_files/cse_element__en.js" type="text/javascript"></script><link type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/default+en.css" rel="stylesheet"><link type="text/css" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/default.css" rel="stylesheet"><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#CCCCCC}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#CCCCCC;background-color:#CCCCCC;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#1155CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#1155CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#1155CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#1155CC}.gsc-cursor-page{color:#1155CC}a.gsc-trailing-more-results:link{color:#1155CC}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#009933}.gs-webResult div.gs-visibleUrl-short{color:#009933}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:none}.gs-webResult div.gs-visibleUrl-breadcrumb{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-breadcrumb{display:none}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#F6F6F6;background-color:#F6F6F6}.gsc-completion-title{color:#1155CC}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#1155CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#1155CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#1155CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#1155CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#009933}.gcsc-find-more-on-google{color:#1155CC}.gcsc-find-more-on-google-magnifier{fill:#1155CC}</style></head>
+
+<body id="Software" style="margin:0px; overflow-y: scroll;">
+
+  <div class="container_20 main_container"><!-- For fluid layout -->  
+
+<!-- link rel="stylesheet" href="https://use.typekit.net/who8lou.css" -->
+<link rel="stylesheet" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/who8lou.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+<style>
+.banner {
+  background-color: #706e6e;
+}
+
+.banner .banner-container {
+  display: flex;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.banner .banner-container .logo {
+  display: inline;
+}
+
+.banner .banner-container .logo img {
+  height: 50px;
+  max-width: 100%;
+}
+
+.banner .banner-container .logo:nth-child(2) img {
+  height: 40px;
+}
+
+.banner .banner-container .logo.gage img {
+  height: 30px;
+}
+
+.banner .banner-container .logo.brand {
+  padding-right: 0.5rem;
+}
+
+.banner .banner-container .logo.brand img {
+  /* height: 40px; */
+  margin-top: 0.5rem;
+  max-width: 100%;
+}
+
+.banner .banner-container .partner-logos {
+  background-color: #404040;
+  display: flex;
+  align-items: center;
+  flex: none;
+  padding: 1rem;
+}
+
+.banner .banner-container .partner-logos .logo {
+  padding-right: 0.5rem;
+}
+
+.banner .banner-container .partner-logos .divider {
+  display: inline;
+  height: 50px;
+  border-right: 1px solid #706e6e;
+  margin: 0 1rem 0 0;
+}
+
+.banner .banner-container .menu-wrapper {
+  flex: 1;
+  background: #b7b9bb;
+  background: linear-gradient(90deg, #b7b9bb 0%, #b7b9bb 25%, #706e6e 75%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  .banner .banner-container .menu-wrapper {
+    padding-left: 1.5rem;
+  }
+}
+
+.banner .banner-container .menu-wrapper .brand-wrapper {
+  flex: 1;
+  text-align: left;
+}
+
+.banner .banner-container .hamburger-menu {
+  cursor: pointer;
+  display: block;
+  background-color: #404040;
+  flex: 0 0 72px;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .banner .banner-container .hamburger-menu {
+    display: none;
+  }
+}
+
+.banner .banner-container .hamburger-menu .icon {
+  color: #fff;
+  height: 72px;
+  width: 72px;
+  background-image: url(../images/header/hamburger-icon.svg);
+  background-size: 38px 38px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner .banner-container .hamburger-menu .icon.open {
+  background-image: url(../images/header/close-icon.svg);
+}
+
+.banner .banner-container .nav-primary {
+  display: none;
+}
+
+@media (max-width: 999.9px) {
+  .banner .banner-container .nav-primary {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 72px;
+    background-color: black;
+  }
+}
+
+.banner .banner-container .nav-primary.open {
+  display: block;
+  z-index: 10;
+}
+
+@media (min-width: 1000px) {
+  .banner .banner-container .nav-primary {
+    display: inline-block;
+  }
+}
+
+.banner .banner-container .nav-primary .top {
+  background-color: #404040;
+  position: relative;
+  top: -1px;
+}
+
+@media (max-width: 999.9px) {
+  .banner .banner-container .nav-primary .top {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.banner .banner-container .nav-primary .top .menu-primary-container {
+  display: inline-block;
+}
+
+.banner .banner-container .nav-primary .top .search img {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 1rem;
+}
+
+@media (max-width: 999.9px) {
+  .banner .banner-container .nav-primary ul {
+    flex-direction: column;
+  }
+}
+
+.banner .banner-container .nav-primary ul li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.banner .banner-container .nav-primary ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: roboto-condensed, sans-serif;
+  font-weight: 700;
+  padding: 0 0.8rem;
+}
+
+.banner .banner-container .nav-primary ul li:hover ul.sub-menu {
+  display: block;
+}
+
+.banner .banner-container .nav-primary ul li ul.sub-menu {
+  top: 2.5rem;
+  position: absolute;
+  z-index: 11;
+  display: none;
+  padding-left: 0;
+  list-style: none;
+  background-color: #000;
+  width: max-content;
+}
+
+@media (max-width: 999.9px) {
+  .banner .banner-container .nav-primary ul li ul.sub-menu {
+    position: initial;
+    padding-left: 1rem;
+    display: block;
+  }
+}
+
+.banner .banner-container .nav-primary ul li ul.sub-menu li::marker {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .banner .banner-container .nav-primary ul li:nth-last-child(1) ul.sub-menu, .banner .banner-container .nav-primary ul li:nth-last-child(2) ul.sub-menu {
+    right: 0;
+    text-align: right;
+  }
+}
+
+.container_20 {
+  padding-top: 0 !important;
+}
+
+.main_container {
+  padding-top: 0;
+}
+
+.main_container .banner.classic .banner-container {
+  max-width: 100%;
+}
+
+.banner.classic {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.banner.classic .banner-container {
+  max-width: 1000px;
+  position: relative;
+}
+
+.banner.classic .banner-container .partner-logos {
+  line-height: 0.8;
+}
+
+.banner.classic .banner-container .nav-primary.open {
+  z-index: 101;
+}
+
+.banner.classic .banner-container .nav-primary ul {
+  height: auto;
+  line-height: 24px;
+  display: flex;
+}
+
+.banner.classic .banner-container .nav-primary ul li {
+  margin-bottom: 0;
+  float: none;
+  text-align: left;
+}
+
+.banner.classic .banner-container .nav-primary ul li:hover ul.sub-menu {
+  display: block;
+}
+
+.banner.classic .banner-container .nav-primary ul li a {
+  text-decoration: none;
+}
+
+.banner.classic .banner-container .nav-primary ul li a:hover {
+  text-decoration: underline;
+}
+
+.banner.classic .banner-container .nav-primary ul li ul.sub-menu {
+  z-index: 60;
+  margin: 0;
+}
+
+@media (min-width: 1000px) {
+  .banner.classic .banner-container .nav-primary ul li:nth-last-child(1) ul.sub-menu li, .banner.classic .banner-container .nav-primary ul li:nth-last-child(2) ul.sub-menu li {
+    right: 0;
+    text-align: right;
+  }
+}
+</style>
+
+<style>
+.banner .banner-container .hamburger-menu .icon {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjMuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQsMTBoMjRjMS4xLDAsMi0wLjksMi0ycy0wLjktMi0yLTJINEMyLjksNiwyLDYuOSwyLDhTMi45LDEwLDQsMTB6IE0yOCwxNEg0Yy0xLjEsMC0yLDAuOS0yLDJzMC45LDIsMiwyaDI0CgljMS4xLDAsMi0wLjksMi0yUzI5LjEsMTQsMjgsMTR6IE0yOCwyMkg0Yy0xLjEsMC0yLDAuOS0yLDJzMC45LDIsMiwyaDI0YzEuMSwwLDItMC45LDItMlMyOS4xLDIyLDI4LDIyeiIvPgo8L3N2Zz4K);
+}
+
+.banner .banner-container .hamburger-menu .icon.open {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjMuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00NDMuNiwzODcuMUwzMTIuNCwyNTUuNGwxMzEuNS0xMzBjNS40LTUuNCw1LjQtMTQuMiwwLTE5LjZsLTM3LjQtMzcuNmMtMi42LTIuNi02LjEtNC05LjgtNAoJYy0zLjcsMC03LjIsMS41LTkuOCw0TDI1NiwxOTcuOEwxMjQuOSw2OC4zYy0yLjYtMi42LTYuMS00LTkuOC00Yy0zLjcsMC03LjIsMS41LTkuOCw0TDY4LDEwNS45Yy01LjQsNS40LTUuNCwxNC4yLDAsMTkuNgoJbDEzMS41LDEzMEw2OC40LDM4Ny4xYy0yLjYsMi42LTQuMSw2LjEtNC4xLDkuOGMwLDMuNywxLjQsNy4yLDQuMSw5LjhsMzcuNCwzNy42YzIuNywyLjcsNi4yLDQuMSw5LjgsNC4xYzMuNSwwLDcuMS0xLjMsOS44LTQuMQoJTDI1NiwzMTMuMWwxMzAuNywxMzEuMWMyLjcsMi43LDYuMiw0LjEsOS44LDQuMWMzLjUsMCw3LjEtMS4zLDkuOC00LjFsMzcuNC0zNy42YzIuNi0yLjYsNC4xLTYuMSw0LjEtOS44CglDNDQ3LjcsMzkzLjIsNDQ2LjIsMzg5LjcsNDQzLjYsMzg3LjF6Ii8+Cjwvc3ZnPgo=);
+}
+</style>
+
+<header class="banner classic">
+  <div class="banner-container">
+    <div class="partner-logos">
+      <span class="logo gage">
+        <a href="https://www.unavco.org/what-we-do/gage-facility/" title="Learn more about the GAGE Facility">
+          <!-- <img src="< ?php echo get_stylesheet_directory_uri(); ? >/assets/images/header/GAGE-Logo.svg" alt="Geodesy Advancing Geosciences and EarthScope logo"> -->
+          <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/GAGE_stand_alone_white_transparent-01.png" alt="Geodesy Advancing Geosciences and EarthScope logo">
+        </a>
+      </span>
+    </div>
+
+    <div class="menu-wrapper">
+      <div class="brand-wrapper">
+        <!-- <a class="brand logo" href="< ?php echo e(home_url('/')); ? >">
+          <img src="https://www.unavco.org/wordpress/wp-content/themes/unavco/resources/assets/images/header/Unavco-Logo.svg" alt="UNAVCO Logo">
+        </a> -->
+        <a class="brand logo" href="https://www.earthscope.org/">
+          <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/earthscope_logo_white-x2.png" alt="EarthScope Consortium Logo">
+        </a>
+      </div>
+      <nav class="nav-primary">
+        <div class="top">
+                      <div class="menu-primary-container"><ul id="menu-primary" class="nav"><li id="menu-item-209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-209"><a href="https://www.unavco.org/data/data.html">Data</a>
+<ul class="sub-menu">
+	<li id="menu-item-625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-625"><a href="https://www.unavco.org/data/data.html#Data-Attribution">Data Attribution</a></li>
+	<li id="menu-item-626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-626"><a href="https://www.unavco.org/data/gps-gnss/gps-gnss.html">GPS/GNSS</a></li>
+	<li id="menu-item-9807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9807"><a href="https://www.unavco.org/geodetic-imaging/sar-data/">Synthetic Aperture Radar (SAR) Data</a></li>
+	<li id="menu-item-628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-628"><a href="https://www.unavco.org/data/lidar-sfm/lidar-sfm.html">Lidar/SfM</a></li>
+	<li id="menu-item-629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-629"><a href="https://www.unavco.org/data/strain-seismic/strain-seismic.html">Strain &amp; Seismic</a></li>
+	<li id="menu-item-630" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-630"><a href="https://www.unavco.org/data/tropospheric/tropospheric.html">Tropospheric</a></li>
+	<li id="menu-item-631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-631"><a href="https://www.unavco.org/data/web-services/web-services.html">Web Services</a></li>
+</ul>
+</li>
+<li id="menu-item-8722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8722"><a href="https://www.unavco.org/instrumentation/">Instrumentation</a>
+<ul class="sub-menu">
+	<li id="menu-item-8715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8715"><a href="https://bsportal.unavco.org/newproject/supportform.aspx">Request Support</a></li>
+	<li id="menu-item-8716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8716"><a href="https://www.unavco.org/nota/">Network of the Americas</a></li>
+	<li id="menu-item-8714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8714"><a href="https://www.unavco.org/borehole-instruments/">Borehole Instruments</a></li>
+	<li id="menu-item-8717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8717"><a href="https://www.unavco.org/nasa-global-gnss-network-support/">NASA Global GNSS Network Support</a></li>
+	<li id="menu-item-8718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8718"><a href="https://www.unavco.org/permanent-station-support/">Permanent Station Support</a></li>
+	<li id="menu-item-635" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-635"><a href="https://www.unavco.org/instrumentation/networks/networks.html">Network Monitoring</a></li>
+	<li id="menu-item-8720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8720"><a href="https://www.unavco.org/gnss-campaign-support/">GNSS Campaign Support</a></li>
+	<li id="menu-item-8719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8719"><a href="https://www.unavco.org/geodetic-imaging/">Geodetic Imaging</a></li>
+	<li id="menu-item-8723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8723"><a href="https://www.unavco.org/projects/project-support/polar/polar.html">Polar Services</a></li>
+</ul>
+</li>
+<li id="menu-item-211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-211"><a href="https://www.unavco.org/software/software.html">Software</a>
+<ul class="sub-menu">
+	<li id="menu-item-9312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9312"><a href="https://www.unavco.org/notebooks/">Notebooks for data access and visualization</a></li>
+	<li id="menu-item-636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-636"><a href="https://www.unavco.org/software/data-processing/data-processing.html">Data Processing</a></li>
+	<li id="menu-item-637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-637"><a href="https://www.unavco.org/software/data-management/data-management.html">Data Management</a></li>
+	<li id="menu-item-638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-638"><a href="https://www.unavco.org/software/visualization/visualization.html">Visualization</a></li>
+	<li id="menu-item-640" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-640"><a href="https://www.unavco.org/software/geodetic-utilities/geodetic-utilities.html">Geodetic Utilities</a></li>
+</ul>
+</li>
+<li id="menu-item-212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212"><a href="https://kb.unavco.org/">Knowledge Base</a></li>
+</ul></div>
+          
+          <a href="https://www.unavco.org/search/search.html?q=#gsc.tab=0" class="search">
+            <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/Search-Icon.svg" alt="Magnifying glass icon">
+          </a>
+        </div>
+
+                  <div class="menu-primary-bottom-container"><ul id="menu-primary-bottom" class="nav"><li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-916"><a href="https://www.unavco.org/what-we-do/">What We Do</a>
+<ul class="sub-menu">
+	<li id="menu-item-10032" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10032"><a href="https://www.earthscope.org/what-is/">What is geophysics?</a></li>
+	<li id="menu-item-920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-920"><a href="https://www.unavco.org/what-we-do/our-services/">Our Services</a></li>
+	<li id="menu-item-923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-923"><a href="https://www.unavco.org/what-we-do/gage-facility/">GAGE Facility</a></li>
+	<li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1295"><a href="https://www.unavco.org/projects/projects.html">Our Projects</a></li>
+</ul>
+</li>
+<li id="menu-item-1705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1705"><a href="https://www.unavco.org/events/">Events</a></li>
+<li id="menu-item-4179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4179"><a href="https://www.unavco.org/education/">Education</a>
+<ul class="sub-menu">
+	<li id="menu-item-4180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4180"><a href="https://www.unavco.org/education/education-resources/">Education Resources</a></li>
+	<li id="menu-item-4182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4182"><a href="https://www.unavco.org/education/student-internships/">Student Internships</a></li>
+	<li id="menu-item-4181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4181"><a href="https://www.unavco.org/education/skill-building-resources/">Skill-Building Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-217"><a href="https://www.unavco.org/news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="https://www.unavco.org/event-responses/">Event Response Highlights</a></li>
+	<li id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607"><a href="https://www.unavco.org/news/news-feed/">News Feed</a></li>
+</ul>
+</li>
+</ul></div>
+              </nav>
+    </div>
+
+    <div class="hamburger-menu">
+      <div id="ham-toggle" class="icon"></div>
+    </div>
+
+  </div>
+</header>
+
+<script>
+  $(document).ready(function() {
+    var btn = document.getElementById('ham-toggle');
+    btn.addEventListener('click', function() {
+      document.querySelector('.nav-primary').classList.toggle('open');
+      document.querySelector('#ham-toggle').classList.toggle('open');
+    });
+  });
+</script>
+	<!--START BANNER -->
+	<!-- Start Common Banner Assets for All Templates -->
+	<!-- End Common Banner Assets for All Templates -->
+  
+
+	<div class="clear noprint" style="background-color:#FFF">&nbsp;</div>
+	<!-- END BANNER -->
+
+	<div id="side_nav" class="grid_4 noprint" style="max-width:180px; margin-top:70px; background-color:#FFF">
+	<!--Side-menu start-->
+	<!-- *Side navigate start* -->	
+<a class="second_level_nav_current" href="https://www.unavco.org/software/software.html">Software</a>	
+	<a class="third_level_nav" href="https://www.unavco.org/software/software-help/software-help.html">Help with Software</a>
+<!--
+	<a class="third_level_nav" href="/software/data-processing/data-processing.html">Data Processing</a>
+	<a class="third_level_nav" href="/software/data-management/data-management.html">Data Management</a>
+	<a class="third_level_nav" href="/software/visualization/visualization.html">Visualization</a>
+	<a class="third_level_nav" href="/software/modeling/modeling.html">Modeling</a>
+-->
+	<a class="third_level_nav_current" href="https://www.unavco.org/software/geodetic-utilities/geodetic-utilities.html">Geodetic Utilities</a>
+		<a class="fourth_level_nav" href="https://www.unavco.org/software/geodetic-utilities/plate-motion-calculator/plate-motion-calculator.html">Plate Motion Calculator</a>
+		<a class="fourth_level_nav_current_last" href="https://www.unavco.org/software/geodetic-utilities/geoid-height-calculator/geoid-height-calculator.html">Geoid Height Calculator</a>
+
+  <!-- Start Related Links -->
+<!--
+<hr style="margin:25px 0px 25px 0px">
+
+<div class="related-nav">
+	<h4>Related Links</h4>
+	<ul>
+		<li><a href="https://med.unavco.org/newproject/supportform.aspx">Request Support</a></li>
+    </ul>
+</div>
+-->
+  <!-- End Related Links -->
+  
+<!-- *Side navigate end* -->
+	<!--Side-menu end-->
+	</div>
+  
+	<div id="body" class="grid_16" style="margin-top:20px; background-color:#FFF">  
+    	<div>
+			<script type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/breadcrumbs.js"></script><div class="crumb"><a href="https://www.unavco.org/">home</a> <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/arrow-bullet.png" border="0" alt="separator"> <a href="https://www.unavco.org/">gage</a> <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/arrow-bullet.png" border="0" alt="separator"> <a href="https://www.unavco.org/software/software.html" <a="">software</a> <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/arrow-bullet.png" border="0" alt="separator"> <a href="https://www.unavco.org/software/geodetic-utilities/geodetic-utilities.html" <a="">geodetic utilities</a> <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/arrow-bullet.png" border="0" alt="separator"> <a class="disabled" href="https://www.unavco.org/software/geodetic-utilities/geoid-height-calculator/geoid-height-calculator.html" <a="">geoid height calculator</a></div>
+	        <h1>Geoid Height Calculator</h1>
+	        <hr class="header">
+
+<!-- \*Enter body content start\*-->
+
+
+
+<!-- <h3 class="bigheader2">Overview</h3> -->
+<!--<h3>Specific Information on the EGM96 Model and the Geoid Correction</h3>-->
+
+<p>Our Geoid Height Calculator calculates a geoid undulation at a 
+point(s) whose latitude and longitude is specified.  This new version 
+(2021-08-18) of our program is designed to use a variety of Earth 
+Gravitational Models and can now calculate heights for multiple points. 
+This calculator is an online notebook developed by the GAGE Facility and
+ included here.</p>
+
+<p>We have included the entire notebook (all cells) with all the notes, 
+references and explication, because this tool is often used in 
+educational settings. For regular users please ignore the bottom half of
+ the scrollable page.</p>
+
+<iframe width="100%" height="4973" frameborder="0" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/geoid-height-calculator.htm"></iframe>
+
+
+
+
+
+<!-- \*Enter body content end\*-->
+
+<!-- BEGIN FOOTER INCLUDE -->
+
+
+<div class="clear noprint">&nbsp;</div>
+<p style="font-size:.7em; float:right; margin:60px 10px 0px 0px" title="2023-05-16&nbsp; 23:18:36&nbsp; UTC">Last modified: 2023-05-16&nbsp; 17:18:36&nbsp; America/Denver</p>
+
+</div><!--close inner body for padding -->
+</div><!--close body div -->
+  
+<div class="clear noprint">&nbsp;</div>
+
+<link rel="stylesheet" href="Geoid%20Height%20Calculator%20Software%20GAGE_files/who8lou.css">
+
+<style>
+footer.content-info {
+  position: relative;
+  margin-top: 4rem;
+}
+footer.content-info img {
+  max-width: 100%;
+  height: auto;
+}
+footer.content-info .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+footer.content-info .container.wide {
+  max-width: 1440px;
+}
+footer.content-info .container.full-width {
+  max-width: 100%;
+  padding: 0;
+}
+footer.content-info .row {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  footer.content-info .row {
+    flex-direction: row;
+  }
+}
+footer.content-info .row .col {
+  flex: 1;
+  padding: 0 1rem;
+}
+footer.content-info .row .col.collapse {
+  padding: 0;
+}
+footer.content-info .social-wrapper {
+  background: #c72023;
+  background: linear-gradient(90deg, #c72023 0%, #322c86 99%);
+}
+footer.content-info .social-wrapper .social-links {
+  display: flex;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+  max-width: 500px;
+  list-style-type: none;
+}
+footer.content-info .social-wrapper .social-links li {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 0;
+}
+footer.content-info .social-wrapper .social-links li a {
+  fill: #fff;
+}
+footer.content-info .social-wrapper .social-links li a svg {
+  height: 1.5rem;
+  display: inline;
+}
+footer.content-info .blue-wrapper {
+  background-color: #37358c;
+  color: #fff;
+  padding-bottom: 4rem;
+}
+footer.content-info .blue-wrapper .menu-footer-container ul.menu {
+  color: #d1cee5;
+  display: flex;
+  margin: 4rem 0;
+  flex-flow: wrap column;
+  list-style-type: none;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .menu-footer-container ul.menu {
+    flex-flow: row wrap;
+  }
+}
+footer.content-info .blue-wrapper .menu-footer-container ul.menu li {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+footer.content-info .blue-wrapper .menu-footer-container ul.menu li::after {
+  content: "";
+  bottom: 0;
+  width: 1rem;
+  border-bottom: 3px solid #716fd1;
+  display: block;
+  margin: 1rem auto;
+}
+footer.content-info .blue-wrapper .menu-footer-container ul.menu li:last-child::after {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .menu-footer-container ul.menu li {
+    flex: auto;
+    display: block;
+    padding: 0 1rem;
+  }
+  footer.content-info .blue-wrapper .menu-footer-container ul.menu li::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 1.3rem;
+    border-right: 3px solid #716fd1;
+    border-bottom: 0;
+    width: auto;
+    bottom: initial;
+    display: inline;
+    margin: 0;
+  }
+}
+footer.content-info .blue-wrapper .menu-footer-container ul.menu li a {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: inherit;
+}
+footer.content-info .blue-wrapper .nsf-logo {
+  position: relative;
+  margin-bottom: 2rem;
+}
+footer.content-info .blue-wrapper .nsf-logo img {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 250px;
+  box-sizing: border-box;
+  background-color: #37358c;
+  padding: 0 2rem;
+  display: block;
+}
+footer.content-info .blue-wrapper .nsf-logo::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  border-top: 1px solid #8786ba;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row {
+    margin-bottom: 3rem;
+  }
+}
+footer.content-info .blue-wrapper .logos-row .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer.content-info .blue-wrapper .logos-row .col .logo {
+  padding: 0 1rem;
+}
+footer.content-info .blue-wrapper .logos-row .col img {
+  width: 200px;
+}
+footer.content-info .blue-wrapper .logos-row .col img.earthscope {
+  width: 250px;
+}
+footer.content-info .blue-wrapper .logos-row .col.left {
+  flex: 0.5;
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row .col.left {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+footer.content-info .blue-wrapper .logos-row .col.left::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  border-bottom: 3px solid #181664;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row .col.left::after {
+    right: 0;
+    left: initial;
+    top: 5%;
+    height: 90%;
+    width: auto;
+    border-left: 3px solid #181664;
+    border-bottom: none;
+  }
+}
+footer.content-info .blue-wrapper .logos-row .col.right {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row .col.right {
+    flex-direction: row;
+  }
+}
+footer.content-info .blue-wrapper .logos-row .col.right .logo {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row .col.right .logo {
+    margin-bottom: 0;
+  }
+}
+footer.content-info .blue-wrapper .logos-row .col.right .by-divider {
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid #7372af;
+  border-bottom: 1px solid #7372af;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  footer.content-info .blue-wrapper .logos-row .col.right .by-divider {
+    padding: 1rem 0;
+  }
+}
+footer.content-info .blue-wrapper .footer-copy {
+  text-align: center;
+  font-weight: 300;
+}
+
+.content-info.classic ul li a {
+  text-decoration: none;
+}
+
+.content-info.classic ul li a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<footer class="content-info classic">
+  <div class="social-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="social-links">
+            <li>
+              <a href="https://twitter.com/EarthScope_sci" title="View the EarthScope Twitter page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/EarthScope.sci/" title="View the EarthScope Facebook page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/company/earthscope-sci/" title="View the EarthScope LinkedIn page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/earthscope_sci/" title="View the EarthScope LinkedIn page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>              </a>
+            </li>
+
+            <li>
+              <a href="https://www.tiktok.com/@terraexplore" title="View the EarthScope TikTok page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>              </a>
+            </li>
+
+            <li>
+              <a href="https://www.youtube.com/@EarthScope_science" title="View the EarthScope YouTube page" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blue-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-9786" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9786"><a href="https://www.earthscope.org/careers/">Careers</a></li>
+<li id="menu-item-9787" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9787"><a href="https://www.earthscope.org/education/student-internships/">Internships</a></li>
+<li id="menu-item-9788" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9788"><a href="https://www.earthscope.org/contact-us/">Contact Us</a></li>
+<li id="menu-item-9789" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9789"><a href="https://www.earthscope.org/how-to-cite/">How to Cite</a></li>
+<li id="menu-item-9792" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9792"><a href="https://www.earthscope.org/earthscope-code-of-conduct/">Code of Conduct</a></li>
+<li id="menu-item-9790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9790"><a href="https://www.earthscope.org/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-9791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9791"><a href="https://www.earthscope.org/terms-of-service/">Terms of Service</a></li>
+</ul></div>        </div>
+      </div>
+    </div>
+
+    <div class="container full-width">
+      <div class="nsf-logo">
+        <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/logo-nsf.png" alt="The National Science Foundation Logo">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row logos-row">
+        <div class="col left">
+          <div class="logo">
+            <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/logo-usgs.png" alt="The logo for USGS">
+          </div>
+          <div class="logo">
+            <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/logo-nasa.png" alt="The logo for NASA">
+          </div>
+            
+        </div>
+        <div class="col right">
+          <div class="logo">
+            <img src="Geoid%20Height%20Calculator%20Software%20GAGE_files/gage-sage-logo-white-mobile.svg" alt="The logos for GAGE and SAGE">
+          </div>
+          <div class="logo">
+            <div class="by-divider">
+              Operated By
+            </div>
+          </div>
+          <div class="logo">
+            <img class="earthscope" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/earthscope-logo-white-mobile.svg" alt="The EarthScope logo">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="footer-copy">EarthScope Consortium operates the 
+National Science Foundation’s Geodetic Facility for the Advancement of 
+Geoscience (GAGE) and Seismological Facility for the Advancement of 
+Geoscience (SAGE)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</div><!-- End container_20 grid -->
+
+<!-- Following is for CrazyEgg heatmaps. Also GA has overlays now -->
+<script type="text/javascript" src="Geoid%20Height%20Calculator%20Software%20GAGE_files/3458.js" async="async" crossorigin="anonymous"></script>
+
+<!-- J. Riley - 2014-03-10 - See me with questions about the following: -->
+<a href="https://www.unavco.org/mail-addresses/pit-of-despair.php"><div style="height:0px; width:0px;"></div></a>
+<!-- end J. Riley - See me -->
+<br class="clear"><!-- 2015-11-23-JR-Added to make body inner div grow to encapsulate its contents, i.e., the KB-->
+
+
+</body></html>
